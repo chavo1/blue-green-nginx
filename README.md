@@ -21,7 +21,11 @@ $ terraform apply
 ```
 - change the count to 0 of blue module located in folder blue/main.tf
 ```
-count         = 0
+resource "aws_instance" "blue" {
+  ami           = "ami-04169656fea786776"
+  instance_type = "t2.micro"
+  key_name      = "${aws_key_pair.blue.id}"
+  count         = 0
 ```
 - After applying the changes the green server will be available on the "load_balancer_dns" from TF output.
 - You can do the same with blue module
