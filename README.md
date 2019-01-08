@@ -1,2 +1,3 @@
-# blue-green-nginx
-blue-green-nginx
+# This repo contain an example of blue/green deployment.
+
+

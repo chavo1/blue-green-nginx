@@ -1,5 +1,6 @@
 variable "access_key" {}
 variable "secret_key" {}
+variable "aws_security_group" {}
 
 variable "region" {
   default = "us-east-1"
