@@ -5,11 +5,12 @@ provider "aws" {
 }
 
 resource "aws_elb" "elb-blue-green" {
-  instances = ["${concat(module.blue.ec2_instance_id, module.green.ec2_instance_id)}"]
-  availability_zones = ["us-east-1a","us-east-1b"]
+  instances          = ["${concat(module.blue.ec2_instance_id, module.green.ec2_instance_id)}"]
+  security_groups    = ["${var.aws_security_group}"]
+  availability_zones = ["us-east-1a", "us-east-1b"]
 
   listener {
-    instance_port     = 8000
+    instance_port     = 80
     instance_protocol = "http"
     lb_port           = 80
     lb_protocol       = "http"
