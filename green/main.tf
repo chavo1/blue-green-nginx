@@ -16,8 +16,8 @@ resource "aws_instance" "green" {
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /tmp/asset/setup-web.sh",
-      "sudo /tmp/asset/setup-web.sh",
+      "chmod +x /tmp/asset/setup-green.sh",
+      "sudo /tmp/asset/setup-green.sh",
     ]
   }
 }
