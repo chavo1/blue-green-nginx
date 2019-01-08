@@ -28,7 +28,7 @@ resource "aws_instance" "blue" {
   count         = 0
 ```
 - After applying the changes the green server will be available on the "load_balancer_dns" from TF output.
-- You can do the same with blue module
+- You can do the same with green module
 - Do not forget to destroy the environment
 ```
 $ terraform destroy
