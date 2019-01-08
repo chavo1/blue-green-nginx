@@ -2,7 +2,8 @@
 
 ## How it works
 
-- The repo contain two modules "blue" and "green" only one of these modules will have a non-zero count. When you deploy both set to non-zero count both will be available on the output IPs but only one will be accessible trough the Load Balancer. When you change the count to zero and apply changes the particular module will become non-active and the other will be available on the "load_balancer_dns" address.
+- The repo contains two modules "blue" and "green" only one of these modules will have a non-zero count and will be available on the LoadBalancer's address. 
+- When you deploy set both modules to non-zero count and both will be available on their public IPs. But only one will be accessible through the Load Balancer. When you change the count to zero and apply changes the particular module will become non-active and the other will be available on the "load_balancer_dns" address.
 
 <img src="screenshot/example.png" width="646" height="429" />
 
